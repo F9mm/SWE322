@@ -8,38 +8,28 @@
 <body>
 	
 <?php
-	
 	class BookList {
 
-		$Books = "Books";
+		Private $Books = array("Book1", "Book2", "Book3");
 		
-		/*
-		public function GetBookList( {
-			return $Books;
+		public function GetBookList() {
+			return $this->Books;
 		}
 
 		public function SearchBookList($x) {
-			return $x
+			return $x;
 		}
-		*/
-
+		
 		public function DisplayBookList() {
-			
-			/*
-			for($i=0; i < count($BookList); i++){
-				echo $Books[i];
-				echo "<br>";
+			foreach ($this->Books as $x) {
+				echo $x . "<br>";
 			}
-			*/
-
-			echo "test";
 		}
 	}
 
 	$testList = new BookList();
 	$testList->DisplayBookList();
-
-
+	
 ?>
 
 </body>
